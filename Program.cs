@@ -7,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 //Add databasen 
 builder.Services.AddDbContext<WestcoastCarsContext>(options => {
-    options.UseSqlite(builder.Configuration.GetConnectionString("Sqlite"));
+    //options.UseSqlite(builder.Configuration.GetConnectionString("Sqlite"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Azure"));
 });
 
 builder.Services.AddControllers();
