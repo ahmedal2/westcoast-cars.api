@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wpqLGAgQUCVoD7y8hVTih0TWbdJb/3OXNSUoi52OzHxwIdM9TPVDwRN2qqR7J5OKSKQDF6PRaWhCr1rrA4pxAg==",
+  "dgSpecHash": "8LxMKi3zicg+mQF73oApeZo8E2o9HoFAD+oeJMXWg1cel18bQyY86MNvJzedB0Fu1WB7JuJ8VtKIv+USLe6Shg==",
   "success": true,
-  "projectFilePath": "c:\\Azure\\Api\\westcoast-cars.api\\westcoast-cars.api.csproj",
+  "projectFilePath": "C:\\Azure\\Api\\westcoast-cars.api\\westcoast-cars.api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ahmda\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ahmda\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

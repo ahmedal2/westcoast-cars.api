@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Microsoft.EntityFrameworkCore;
 using westcoast_cars.api.Entities;
 
 namespace westcoast_cars.api.Data
@@ -25,8 +26,14 @@ namespace westcoast_cars.api.Data
             // Steg 5. Skicka listan med VehicleModel objekt till databasen...
             if (manufacturers is not null && manufacturers.Count > 0)
             {
+                using var trx = context.Database.BeginTransaction();
+                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Manufacturers ON");
+                
                 await context.Manufacturers.AddRangeAsync(manufacturers);
                 await context.SaveChangesAsync();
+
+                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Manufacturers OFF");
+                trx.Commit();
             }
         }
 
@@ -50,8 +57,15 @@ namespace westcoast_cars.api.Data
             // Steg 5. Skicka listan med VehicleModel objekt till databasen...
             if (vehicles is not null && vehicles.Count > 0)
             {
+                using var trx = context.Database.BeginTransaction();
+                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Vehicles ON");
+                
+
                 await context.Vehicles.AddRangeAsync(vehicles);
                 await context.SaveChangesAsync();
+
+                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.Vehicles OFF");
+                trx.Commit();
             }
         }
 
@@ -75,8 +89,14 @@ namespace westcoast_cars.api.Data
             // Steg 5. Skicka listan med VehicleModel objekt till databasen...
             if (fueltypes is not null && fueltypes.Count > 0)
             {
+                using var trx = context.Database.BeginTransaction();
+                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.FuelTypes ON");
+
                 await context.FuelTypes.AddRangeAsync(fueltypes);
                 await context.SaveChangesAsync();
+
+                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.FuelTypes OFF");
+                trx.Commit();
             }
         }
 
@@ -100,8 +120,15 @@ namespace westcoast_cars.api.Data
             // Steg 5. Skicka listan med VehicleModel objekt till databasen...
             if (transmissions is not null && transmissions.Count > 0)
             {
+                using var trx = context.Database.BeginTransaction();
+                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.TrasmissionsTypes ON");
+
+
                 await context.TrasmissionsTypes.AddRangeAsync(transmissions);
                 await context.SaveChangesAsync();
+
+                context.Database.ExecuteSqlRaw("SET IDENTITY_INSERT dbo.TrasmissionsTypes OFF");
+                trx.Commit();
             }
         }
     }
