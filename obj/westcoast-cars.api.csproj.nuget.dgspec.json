@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Azure\\Api\\westcoast-cars.api\\westcoast-cars.api.csproj": {}
+    "c:\\Azure\\Api\\westcoast-cars.api\\westcoast-cars.api.csproj": {}
   },
   "projects": {
-    "C:\\Azure\\Api\\westcoast-cars.api\\westcoast-cars.api.csproj": {
+    "c:\\Azure\\Api\\westcoast-cars.api\\westcoast-cars.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Azure\\Api\\westcoast-cars.api\\westcoast-cars.api.csproj",
+        "projectUniqueName": "c:\\Azure\\Api\\westcoast-cars.api\\westcoast-cars.api.csproj",
         "projectName": "westcoast-cars.api",
-        "projectPath": "C:\\Azure\\Api\\westcoast-cars.api\\westcoast-cars.api.csproj",
+        "projectPath": "c:\\Azure\\Api\\westcoast-cars.api\\westcoast-cars.api.csproj",
         "packagesPath": "C:\\Users\\ahmda\\.nuget\\packages\\",
-        "outputPath": "C:\\Azure\\Api\\westcoast-cars.api\\obj\\",
+        "outputPath": "c:\\Azure\\Api\\westcoast-cars.api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ahmda\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,7 +21,6 @@
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,6 +44,10 @@
               "version": "[7.0.2, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.3, )"
             },
